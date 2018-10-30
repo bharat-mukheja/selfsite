@@ -39,7 +39,7 @@ render(){
               </NavItem>
 
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="https://github.com/bmukheja/bmukheja.github.io/blob/master/Bharat_Data%20Science.pdf">Portfolio</NavLink>
+                <NavLink className="font-weight-bold" href="static/Bharat_Data Science.pdf">Portfolio</NavLink>
               </NavItem>
 
               <NavItem className="d-flex align-items-center">
