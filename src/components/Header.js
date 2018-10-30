@@ -25,13 +25,25 @@ const Header = () => (
               </NavItem>
               
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="/">Home</NavLink>
+                <NavLink className="font-weight-bold" onClick={this.props.onHeaderClick("home")}>Home</NavLink>
               </NavItem>
               
               <NavItem className="d-flex align-items-center">
+                <NavLink className="font-weight-bold" href="/">About Me</NavLink>
+              </NavItem>
+
+              <NavItem className="d-flex align-items-center">
                 <NavLink className="font-weight-bold" href="/">Portfolio</NavLink>
               </NavItem>
-              
+
+              <NavItem className="d-flex align-items-center">
+                <NavLink className="font-weight-bold" href="/">Experience</NavLink>
+              </NavItem>
+
+              <NavItem className="d-flex align-items-center">
+                <NavLink className="font-weight-bold" href="/">Skills</NavLink>
+              </NavItem>
+
               <UncontrolledDropdown className="d-flex align-items-center" nav inNavbar>
                 <DropdownToggle className="font-weight-bold" nav caret>Links</DropdownToggle>
                 <DropdownMenu right>
@@ -43,6 +55,10 @@ const Header = () => (
                 </DropdownMenu>
               </UncontrolledDropdown>
               
+              <NavItem className="d-flex align-items-center">
+                <NavLink className="font-weight-bold" href="mailto:bharat.mukheja2017@gmail.com">Contact Me</NavLink>
+              </NavItem>
+
             </Nav>
           </Col>
           

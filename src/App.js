@@ -5,15 +5,29 @@ import Post from './components/Post';
 import Header from './components/Header';
 import SideCard from './components/SideCard';
 
+import {pages} from './Pages';
+
 class App extends Component {
+  
+  constructor(){
+    super();
+    this.onHeaderClick = this.onHeaderClick.bind(this);
+  }
+  state = {page:pages.home};
+
+  onHeaderClick(pagename){
+    this.setState({page:pages[pagename]});
+  }
+
   componentDidMount(){
     document.title = "About Me"
   }
+
   render() {
     return (
       <Fragment>
 
-        <Header />
+        <Header onHeaderClick={this.onHeaderClick}/>
 
         <main className="my-5 py-5">
           <Container className="px-0">
@@ -24,7 +38,7 @@ class App extends Component {
               </Col>
 
               <Col xs={{ order: 1 }} md={{ size: 7, offset: 1 }} tag="section" className="py-5 mb-5 py-md-0 mb-md-0">
-                <Post />
+                <Post content={this.state.page} />
               </Col>
 
             </Row>
