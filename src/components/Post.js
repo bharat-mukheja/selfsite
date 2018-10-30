@@ -1,29 +1,21 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios';
 import { Badge } from 'reactstrap';
+
+var post_writeup = "I am a computer science engineer interested in Machine Learning, Data Science, Backend Development and Product Development. I want to make computers smarter and useful in solving daily problems and help us in a smarter way. You can find the list of the projects which I have worked on in the projects tab. I am actively looking for job opportunities with organizations who can leverage my skills and experience and at the same time provide me with a challenge. Offline I am great person to hang out with, my hobbies include playing racquetball, instagramming, travelling, public speaking, working out, photography and singing.\n\nSelect any tab to know about me and my skills.";
 
 class Post extends Component {
 
-  state = { post: null }
+  state = { post: post_writeup }
   
-  componentDidMount() {
-    axios.get('https://baconipsum.com/api/?type=meat-and-filler&paras=4&format=text')
-      .then(response => this.setState({ post: response.data }));
-  }
   
   render() {
     return (
       <Fragment>
         { this.state.post && <div className="position-relative">
         
-          <span className="d-block pb-2 mb-0 h6 text-uppercase text-info font-weight-bold">
-            Editor's Pick
-            <Badge pill color="success" className="text-uppercase px-2 py-1 ml-3 mb-1 align-middle" style={{ fontSize: '0.75rem' }}>New</Badge>
-          </span>
+          <span className="d-block pb-4 h2 text-dark border-bottom border-gray">Hola! Soy Bharat Mukheja</span>
           
-          <span className="d-block pb-4 h2 text-dark border-bottom border-gray">Getting Started with React</span>
-          
-          <article className="pt-5 text-secondary text-justify" style={{ fontSize: '0.9rem', whiteSpace: 'pre-line' }}>{this.state.post}</article>
+          <article className="pt-5 text-secondary text-justify" style={{ fontSize: '1.2rem', whiteSpace: 'pre-line' }}>{this.state.post}</article>
           
         </div> }
       </Fragment>
