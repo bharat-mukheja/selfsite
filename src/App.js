@@ -13,7 +13,7 @@ class App extends Component {
     super();
     this.onHeaderClick = this.onHeaderClick.bind(this);
   }
-  state = {page:pages.home};
+  state = {page:pages.home}
 
   onHeaderClick(pagename){
     this.setState({page:pages[pagename]});

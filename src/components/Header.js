@@ -8,7 +8,13 @@ import {
 
 const AVATAR = 'https://media.licdn.com/dms/image/C5603AQE7jVylA8rlJg/profile-displayphoto-shrink_200_200/0?e=1546473600&v=beta&t=0yPE79zbpMjlnctJGaNr0_e97qaFizsH32bf9sCBPzU';
 
-const Header = () => (
+class Header extends React.Component {
+  handleClick(i) {
+    this.props.onHeaderClick(i)
+  }
+
+render(){ 
+  return (
   <header>
     <Navbar fixed="top" color="light" light expand="xs" className="border-bottom border-gray bg-white" style={{ height: 80 }}>
     
@@ -25,23 +31,23 @@ const Header = () => (
               </NavItem>
               
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" onClick={this.props.onHeaderClick("home")}>Home</NavLink>
+                <NavLink className="font-weight-bold" onClick={() => this.handleClick("home")}>Home</NavLink>
               </NavItem>
               
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="/">About Me</NavLink>
+                <NavLink className="font-weight-bold" onClick={() => this.handleClick("aboutme")}>About Me</NavLink>
               </NavItem>
 
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="/">Portfolio</NavLink>
+                <NavLink className="font-weight-bold" href="https://github.com/bmukheja/bmukheja.github.io/blob/master/Bharat_Data%20Science.pdf">Portfolio</NavLink>
               </NavItem>
 
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="/">Experience</NavLink>
+                <NavLink className="font-weight-bold" onClick={() => this.handleClick("experience")}>Experience</NavLink>
               </NavItem>
 
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="/">Skills</NavLink>
+                <NavLink className="font-weight-bold" onClick={() => this.handleClick("skills")}>Skills</NavLink>
               </NavItem>
 
               <UncontrolledDropdown className="d-flex align-items-center" nav inNavbar>
@@ -72,5 +78,7 @@ const Header = () => (
     </Navbar>
   </header>
 );
+}
+}
 
 export default Header;
