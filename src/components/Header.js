@@ -7,7 +7,7 @@ import {
   DropdownToggle, DropdownMenu, DropdownItem
 } from 'reactstrap';
 
-const AVATAR = 'https://www.gravatar.com/avatar/429e504af19fc3e1cfa5c4326ef3394c?s=240&d=mm&r=pg';
+const AVATAR = 'https://media.licdn.com/dms/image/C5603AQE7jVylA8rlJg/profile-displayphoto-shrink_200_200/0?e=1546473600&v=beta&t=0yPE79zbpMjlnctJGaNr0_e97qaFizsH32bf9sCBPzU';
 
 const Header = () => (
   <header>
@@ -30,35 +30,26 @@ const Header = () => (
               </NavItem>
               
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="/">Events</NavLink>
+                <NavLink className="font-weight-bold" href="/">Portfolio</NavLink>
               </NavItem>
               
               <UncontrolledDropdown className="d-flex align-items-center" nav inNavbar>
-                <DropdownToggle className="font-weight-bold" nav caret>Learn</DropdownToggle>
+                <DropdownToggle className="font-weight-bold" nav caret>Links</DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem className="font-weight-bold text-secondary text-uppercase" header disabled>Learn React</DropdownItem>
+                  <DropdownItem className="font-weight-bold text-secondary text-uppercase" header disabled>Get to know me</DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>Documentation</DropdownItem>
-                  <DropdownItem>Tutorials</DropdownItem>
-                  <DropdownItem>Courses</DropdownItem>
+                  <DropdownItem href="https://www.linkedin.com/in/bmukheja">LinkedIn</DropdownItem>
+                  <DropdownItem href="https://www.github.com/bmukheja">Github</DropdownItem>
+                  <DropdownItem href="https://facebook.com/bmukheja">Facebook</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               
             </Nav>
           </Col>
           
-          <Col className="d-flex justify-content-xs-start justify-content-lg-center">
-            <NavbarBrand className="d-inline-block p-0" href="/" style={{ width: 80 }}>
-              <img src={logo} alt="logo" className="position-relative img-fluid" />
-            </NavbarBrand>
-          </Col>
           
-          <Col className="d-none d-lg-flex justify-content-end">
-            <Form inline>
-              <Input type="search" className="mr-3" placeholder="Search React Courses" />
-              <Button type="submit" color="info" outline>Search</Button>
-            </Form>
-          </Col>
+          
+          
           
         </Row>
       </Container>
