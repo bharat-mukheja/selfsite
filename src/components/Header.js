@@ -50,6 +50,10 @@ render(){
                 <NavLink className="font-weight-bold" onClick={() => this.handleClick("skills")}>Skills</NavLink>
               </NavItem>
 
+              <NavItem className="d-flex align-items-center">
+                <NavLink className="font-weight-bold" onClick={() => this.handleClick("projects")}>Projects</NavLink>
+              </NavItem>
+
               <UncontrolledDropdown className="d-flex align-items-center" nav inNavbar>
                 <DropdownToggle className="font-weight-bold" nav caret>Links</DropdownToggle>
                 <DropdownMenu right>
