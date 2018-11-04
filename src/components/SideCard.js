@@ -5,7 +5,7 @@ import {
     CardTitle, CardSubtitle, CardText, Container, Row
 } from 'reactstrap';
 
-const BANNER = 'https://lh3.googleusercontent.com/4StWBPz6X7NCZbpQ32L9yFBYM0wvYjnJ_XKkig9KfnoKrJtfBOGBjH_XXPLLOn8PxlxZuE4IuNtu=s220';
+const BANNER = 'static/Sidebar Picture.jpg';
 
 var urls = [
     "https://www.github.com/bmukheja",
